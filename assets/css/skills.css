@@ -1,0 +1,43 @@
+.content .skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+
+
+
+.skills li::before{
+    width: 1.5rem;
+    height: 1.5rem;
+    content:'';
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain ;
+    margin-right: 1rem; 
+    background-image: url('/assets/utils//skills/js.svg');
+    
+}
+.skills .html::before{
+    background-image: url('/assets/utils/skills/html.svg');
+}
+.skills .css::before{
+    background-image: url('/assets/utils/skills/css.svg');
+}
+.skills .react::before{
+    background-image: url('/assets/utils/skills/react.svg');
+}
+.skills .git::before{
+    background-image: url('/assets/utils/skills/git.svg');
+}
+.skills li{
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+}

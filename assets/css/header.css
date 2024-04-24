@@ -1,0 +1,102 @@
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.head::after{
+    content:'';
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain ;
+    background-image: url('/assets/utils/pointers.svg');
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+.head .photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+.head .title{
+    text-align: center;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    
+}
+.info img{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.info p{
+    margin: .5rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.25rem;
+    align-items: center;
+    
+    
+}
+
+.info p::before{
+    
+    width: 1rem;
+    height: 1rem;
+    content:'';
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain ;
+    margin-right: .5rem;
+}
+.info .job::before{
+    background-image: url('/assets/utils/Group.svg');
+
+}
+.info .local::before{
+    background-image: url('/assets/utils/location.svg');
+
+}
+.info .phone::before{
+    background-image: url('/assets/utils/wpp.svg');
+
+}
+.info .mail::before{
+    background-image: url('/assets/utils/mail.svg');
+
+}
+.info .linkedin::before{
+    background-image: url('/assets/utils/linkedin.svg');
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .head{
+        display: grid;
+        grid-template-areas: "photo title" "photo info";
+
+    }
+    .head .title{
+        grid-area: title;
+        text-align: start;
+        max-width: 200px;
+    }
+    .head .photo{
+        grid-area: photo;
+        margin: 0 auto;
+    }
+    .head .info{
+        grid-area: info;
+    }
+  }
+  

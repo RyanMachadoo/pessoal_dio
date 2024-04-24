@@ -1,0 +1,58 @@
+.acordion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 1rem;
+    border-color: white;
+    margin: 1rem 0;
+    transition: 0.5s;
+}
+.acordion .trigger{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: 700;
+}
+.acordion .trigger::after{
+    background-image: url('/assets/utils/icon_acordeon.svg');
+    width: 1.5rem;
+    height: 1.5rem;
+    content:'';
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+    
+}
+.acordion .trigger:hover{
+    cursor: pointer;
+}
+.acordion.open,
+.acordion:hover{
+    background-color:  #55569E;
+    border-color: 55569E;
+    transition: 0.5s;
+    
+}
+
+.acordion .content{
+    overflow: hidden;
+    height: 0;
+    transition: opacity .5s ease-in-out;
+}
+.acordion.open .trigger::after{
+    transform: rotate(180deg);
+}
+
+.acordion.open .content{
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
